@@ -18,7 +18,7 @@ import {
 } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 // --- Sortable Item Component ---
 function SortableTaskItem({ task, toggleComplete, deleteTask, formatDateTime, isExpired }) {
